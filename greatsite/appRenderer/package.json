@@ -1,0 +1,36 @@
+{
+  "name": "appRenderer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "webpack.config.js",
+  "scripts": {
+    "clean": "rm -rf dist",
+    "build": "npm run clean && npm run _build-server && npm run _build-client",
+    "start-server": "node dist/main.js",
+    "_build-server": "REACT_APP_IS_SERVER=1 webpack --config webpack.server.config.js",
+    "_build-client": "REACT_APP_IS_SERVER=0 webpack --config webpack.client.config.js"
+  },
+  "dependencies": {
+    "axios": "^0.26.0",
+    "html-react-parser": "^1.4.11",
+    "morgan": "^1.10.0",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "react-error-boundary": "^3.1.4",
+    "react-mf-remote-fragment": "^1.0.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.16.5",
+    "@babel/preset-react": "^7.16.5",
+    "babel-loader": "^8.2.3",
+    "bundle-loader": "^0.5.6",
+    "html-webpack-plugin": "^5.5.0",
+    "serve": "^13.0.2",
+    "webpack": "^5.65.0",
+    "webpack-cli": "^4.9.1",
+    "webpack-dev-server": "^4.6.0",
+    "webpack-node-externals": "^3.0.0"
+  },
+  "author": "",
+  "license": "ISC"
+}

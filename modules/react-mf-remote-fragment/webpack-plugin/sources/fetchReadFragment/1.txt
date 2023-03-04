@@ -1,0 +1,50 @@
+"use strict";
+exports.id = "fetchReadFragment";
+exports.ids = ["fetchReadFragment"];
+exports.modules = {
+
+/***/ "./src/FetchFragment.js":
+/*!*****************************************************************!*\
+  !*** ./src/FetchFragment.js ***!
+  \*****************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _ReadFragment__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ReadFragment */ "./src/ReadFragment.js");
+/* harmony import */ var appRenderer_AppRendererContextForFragments__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! appRenderer/AppRendererContextForFragments */ "webpack/container/remote/appRenderer/AppRendererContextForFragments");
+/* harmony import */ var appRenderer_AppRendererContextForFragments__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(appRenderer_AppRendererContextForFragments__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! axios */ "axios");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_3__);
+
+
+
+
+
+function FetchFragment(props) {
+  const remoteRenderedFragmentData = (0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)({
+    data: null
+  });
+  const {
+    userAgent
+  } = (0,react__WEBPACK_IMPORTED_MODULE_0__.useContext)((appRenderer_AppRendererContextForFragments__WEBPACK_IMPORTED_MODULE_2___default()));
+
+  function waitRemoteRenderedFragment(props) {
+    let done = false;
+    let promise = null;
+    return {
+      read() {
+        if (done) {
+          return;
+        }
+
+        if (promise) {
+          throw promise;
+        }
+
+        promise = new Promise(async resolve => {
+          const url = `

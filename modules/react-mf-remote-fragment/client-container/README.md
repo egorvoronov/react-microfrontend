@@ -1,0 +1,4 @@
+**JUST CREATE A SUSPENSE WRAPPER FOR EVERY FRONTEND VERSION OF A FRAGMENT**:
+
+Manual actions for now:
+- just using REACT_APP_IS_SERVER env var for now

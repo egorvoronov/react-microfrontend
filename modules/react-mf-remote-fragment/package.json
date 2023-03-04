@@ -1,0 +1,15 @@
+{
+  "name": "react-mf-remote-fragment",
+  "version": "1.0.0",
+  "description": "Module federation library to allow fragments to be server side rendered",
+  "main": "index.js",
+  "scripts": {
+    "build": "cd webpack-plugin && rm -rf ./dist && webpack --config src/webpack.server.template.config.js"
+  },
+  "author": "Egor Voronov",
+  "license": "ISC",
+  "dependencies": {
+    "fs-extra": "^10.1.0",
+    "webpack-sources": "^3.2.3"
+  }
+}
