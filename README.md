@@ -1,6 +1,8 @@
 # react-microfrontend 🚀
 Just an example of how you could use module federation to build a scalable site that could be developed by multiple different teams **independently**.
 
+Find the article describes it in the details on a [habr](https://habr.com/ru/post/720572/).
+
 ☝🏻 Remember, that this is just a POC and not a production ready code, it just proves that independent development of fragments + server side rendering is possible with the standard instruments we already have.
 
 Ok, let's see how deep is the rabbit hole 🐇

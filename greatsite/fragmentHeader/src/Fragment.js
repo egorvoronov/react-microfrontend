@@ -1,4 +1,4 @@
-import React, { Suspense } from 'react';
+import React from 'react';
 import Header from "./components/Header";
 import FragmentClientContainer from "react-mf-remote-fragment/client-container/FragmentClientContainer";
 
